@@ -1,0 +1,154 @@
+*{
+ margin: 0;
+ padding: 0;
+ font-family: 'Poppins', sans-serif;
+ box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: rgb(248, 218, 191);
+    color: #fff;
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(/frontend/spaza_pages/img/container.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    padding: 10px 10%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 140px;
+    color: black;
+    font-size: 80px;
+}
+
+#about {
+    padding: 80px 0;
+    color: black;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1 {
+    flex-basis: 35%;
+}
+
+.about-1 img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.about-2 {
+    flex-basis: 60%;
+    font-size: 100px; 
+    font-weight: 700;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  
+}
+
+#main {
+    margin-top: 119px;
+}
+
+#content{
+    padding-top: 1px;
+    padding-bottom: 50px;
+}
+
+#items {
+    padding-top: 1px;
+    padding-bottom: 50px;
+}
+
+a.info-box {
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.384);
+    width: 90%;
+    height: 90px;
+    display: block;
+    margin: auto;
+    margin-top: 12px;
+    padding: 1px;
+}
+
+p.info-box {
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.384);
+    width: 90%;
+    height: 90px;
+    display: block;
+    margin: auto;
+    margin-top: 12px;
+    padding: 1px;
+}
+
+.info-box img {
+    height: 70px;
+    margin: 10px;
+    float: left;
+}
+
+.info-box h3 {
+    padding: 0;
+    padding-top: 12px;
+    margin-bottom: 0;
+    width: 90%;
+    color: #572800;
+}
+
+.info-box p {
+    margin: 0;
+    padding: 0;
+    width: 90%;
+    color: #131313;
+}
+
+.info-box img.right {
+    float: right;
+    margin-top: 25px;
+    height: 40px;   
+}
+
+.info-box h4.price {
+    float: right;
+    margin-top: 25px;
+    height: 40px;
+    padding: 6px;
+}
+
+#info-box-full {
+    background: rgba(255, 255, 255, .8);
+    width: 90%;
+    display: block;
+    margin: auto;
+    margin-top: 12px;
+    padding: 10px;
+}
+
+#info-box-full img {
+    width: 100%;
+}
+
+#info-box-full h3 {
+    text-align: center;
+}

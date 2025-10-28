@@ -10,7 +10,7 @@
   "name": "mcsean",
   "version": "1.0.0",
   "description": "",
-  "main": "login.js",
+  "main": "index.js",
   "scripts": {
     "dev": "nodemon backend/server.js"
   },

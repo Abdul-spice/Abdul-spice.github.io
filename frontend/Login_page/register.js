@@ -19,7 +19,7 @@ document.getElementById("registerForm").addEventListener("submit", function (e) 
   .then(data => {
     if (data.success) {
       alert("Registered successfully!");
-      window.location.href = "login.html";
+      window.location.href = "index.html";
     } else {
       alert(data.message || "Registration failed.");
     }

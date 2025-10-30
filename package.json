@@ -14,7 +14,7 @@
   "scripts": {
     "dev": "nodemon backend/server.js",
     "frontend": "parcel frontend/index.html",
-    "build": "parcel build \"frontend/Login_page/index.html\" --dist-dir frontend/dist",
+    "build": "parcel build frontend/Login_page/index.html --dist-dir frontend/dist",
     "start": "cross-env NODE_ENV=production node backend/server.js"
   },
   "type": "commonjs",

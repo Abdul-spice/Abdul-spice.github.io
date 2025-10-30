@@ -26,9 +26,21 @@ Thumbs.db
 coverage/
 *.test.js.snap
 
-# Jekyll build and cache folders
+# Node
+node_modules/
+.env
+dist/
+build/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jekyll (if present)
 _site/
-.sass-cache/
 .jekyll-cache/
 .jekyll-metadata
 

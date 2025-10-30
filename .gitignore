@@ -25,3 +25,16 @@ Thumbs.db
 # Optional: coverage and test output
 coverage/
 *.test.js.snap
+
+# Jekyll build and cache folders
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Bundler and vendor folders
+.bundle/
+vendor/
+
+# Optional: ignore Gemfile.lock if using GitHub Pages
+Gemfile.lock

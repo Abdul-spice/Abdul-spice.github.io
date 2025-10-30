@@ -1,9 +1,10 @@
 const dotenv = require('dotenv');
 dotenv.config();
-console.log("Mongo URL:", process.env.mongo_url);
+console.log("Mongo URL:", process.env.MONGO_URL);
 
 const express = require('express');
 const app = express();
+app.use(express.json());
 const cors = require('cors');
 app.use(cors({
   origin: 'http://127.0.0.1:5500',
@@ -11,25 +12,37 @@ app.use(cors({
 }));
 const mongoose = require('mongoose');
 const connectDB = require('./config/db.js');
-const user_profiles = require('./models/user_profiles.js');
 
 connectDB();
 
-app.use(express.json());
+const authRoutes = require("./routes/auth");
+app.use("/api/auth", authRoutes);
+
+
+app.use((req, res, next) => {
+  res.setHeader(
+    "Content-Security-Policy",
+    "default-src 'self'; connect-src 'self' http://localhost:3000 https://api.openai.com"
+  );
+  next();
+});
 
 const user_profilesRoutes = require('./routes/user_profiles');
 app.use("/api/user_profiles", user_profilesRoutes);
 
-const authRoutes = require('./routes/auth');
-app.use('/api', authRoutes);
+  
+
+if (process.env.NODE_ENV === "production") {
+  const path = require('path');
+  const __dirname = path.resolve();
+
+  app.use(express.static(path.join(__dirname, "/frontend/dist")));
+  app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "/frontend/dist/index.html"));
+  });
+}
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log('Server started at http://localhost:' + PORT);
 });
-
-
-//console.log(process.env.mongo_url);
-
-
-const bcrypt = require('bcrypt');

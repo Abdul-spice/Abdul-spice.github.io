@@ -10,3 +10,9 @@ router.put("/:id",updateUser);
 router.delete("/:id",deleteUser);
 //basic routes
 module.exports = router;
+const verifyToken = require("../middleware/authMiddleware");
+
+router.get("/", verifyToken, async (req, res) => {
+  const profiles = await UserProfile.find();
+  res.json(profiles);
+});

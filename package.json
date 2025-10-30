@@ -6,7 +6,8 @@
     "express": "4.18.2",
     "jsonwebtoken": "^9.0.2",
     "mongodb": "^6.20.0",
-    "mongoose": "^8.19.1"
+    "mongoose": "^8.19.1",
+    "react-scripts": "^5.0.1"
   },
   "name": "mcsean",
   "version": "1.0.0",

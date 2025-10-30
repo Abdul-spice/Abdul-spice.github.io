@@ -22,4 +22,4 @@ const user_profilesSchema = new mongoose.Schema({
 
 const user_profiles = mongoose.model('user_profiles', user_profilesSchema);
 
-module.exports = user_profiles; 
+module.exports = user_profiles;

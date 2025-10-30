@@ -1,18 +1,9 @@
-const express = require('express');
-const user_profiles = require('../models/user_profiles.js');
-const { getAllUsers, createUser, updateUser, deleteUser } = require('../controller/user_profiles.controllers.js');
-
+const express = require("express");
 const router = express.Router();
+const User = require("../models/user_profiles");
 
-router.get('/',getAllUsers);  
-router.post("/",createUser); 
-router.put("/:id",updateUser);
-router.delete("/:id",deleteUser);
-//basic routes
-module.exports = router;
-const verifyToken = require("../middleware/authMiddleware");
-
-router.get("/", verifyToken, async (req, res) => {
-  const profiles = await UserProfile.find();
-  res.json(profiles);
+router.get("/", async (req, res) => {
+  const users = await User.find();
+  res.json(users);
 });
+module.exports = router; // ✅ Must export the router directly

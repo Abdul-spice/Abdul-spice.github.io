@@ -1,0 +1,52 @@
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Build output
+/frontend/dist/
+/frontend/node_modules/
+
+# IDE/editor settings
+.vscode/
+.idea/
+*.swp
+
+# Optional: coverage and test output
+coverage/
+*.test.js.snap
+
+# Node
+node_modules/
+.env
+dist/
+build/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jekyll (if present)
+_site/
+.jekyll-cache/
+.jekyll-metadata
+
+# Bundler and vendor folders
+.bundle/
+vendor/
+
+# Optional: ignore Gemfile.lock if using GitHub Pages
+Gemfile.lock

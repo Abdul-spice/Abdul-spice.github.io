@@ -1,0 +1,45 @@
+body {
+      background: #d1e4ff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      color: #333;
+      margin-top: 20px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .location-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px;
+    }
+
+    .location-card img {
+      width: 300px;
+      height: auto;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .label {
+      margin-top: 10px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #333;
+      transition: color 0.3s;
+    }
+
+    .label:hover {
+      color: #007bff;
+    }

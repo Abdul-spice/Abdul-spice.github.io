@@ -8,12 +8,12 @@
     const email = `${username}@example.com`; // or use a real email input
 
   try {
-    const res = await fetch("https://abdul-spice.github.io/api/login", {
+    const res = await fetch("https://find-your-spaza.onrender.com/api/login", {
       method: "POST",
       headers: { 
         "Content-Type": "application/json"
       },
-      Credentials: 'include',
+      credentials: 'include',
       body: JSON.stringify({ email, password })
     });
 

@@ -4,7 +4,7 @@ document.getElementById("registerForm").addEventListener("submit", function (e) 
       const password = document.getElementById("regPassword").value;
       const email = `${username}@example.com`; // or use a real email input
 
-  fetch("http://localhost:3000/api/user_profiles", {
+  fetch("https://abdul-spice.github.io/api/user_profiles", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"

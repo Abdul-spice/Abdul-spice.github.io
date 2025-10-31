@@ -7,7 +7,7 @@ app.use(express.json());
 
 const cors = require('cors');
 app.use(cors({
-  origin: 'http://127.0.0.1:5500',
+  origin: 'https://abdul-spice.github.io',
   credentials: true
 }));
 const protectedRoutes = require("./routes/protected");
@@ -26,7 +26,7 @@ app.use("/api/user_profiles", user_profilesRoutes);
 app.use((req, res, next) => {
   res.setHeader(
     "Content-Security-Policy",
-    "default-src 'self'; connect-src 'self' http://localhost:3000 https://api.openai.com"
+    "default-src 'self'; connect-src 'self' https://abdul-spice.github.io/ https://api.openai.com"
   );
   next();
 });
@@ -43,5 +43,5 @@ if (process.env.NODE_ENV === "production") {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log('🚀 Server started at http://localhost:' + PORT);
+  console.log('🚀 Server started at https://abdul-spice.github.io:' + PORT);
 });

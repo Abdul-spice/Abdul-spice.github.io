@@ -20,9 +20,3 @@ jobs:
       - name: Install backend dependencies
         run: npm install
         working-directory: ./backend
-
-      - name: Build frontend
-        run: |
-          npm install
-          npm run build
-        working-directory: ./frontend
